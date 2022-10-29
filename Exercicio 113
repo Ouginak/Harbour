@@ -1,0 +1,45 @@
+Carregar um vetor com 12 caracteres gerados aleatoriamente
+(randômicos). Serão válidos apenas caracteres que representem
+letras minúsculas de “a” até “z”. A carga do vetor deverá ser feita
+através de uma sub-rotina que é chamada automaticamente no
+programa principal. Os caracteres NÃO podem se repetir. Exibir no
+final o vetor gerado. A exibição deverá ser feita via uma sub-rotina.
+
+function Main()
+    local aArray := {}
+ 
+    aArray := add_Array(aArray)
+    print_Array(aArray)
+ 
+return nil
+ 
+static function add_Array(aArray)
+    local nI
+    local cString := ''
+    local nString := 0
+    local aVetor := {}
+    local nExistente := 0
+ 
+    for nI := 1 to 12
+        nString := hb_randInt(97,122)
+        cString := chr(nString)
+ 
+        nExistente := AScan(aVetor, cString)
+        if nExistente > 0
+            nI--
+        else
+            AAdd(aVetor, cString)
+        end if
+    next
+return aVetor
+ 
+static function print_Array(aArray)
+    local aVetor := ""
+    local nI
+ 
+    for nI := 1 to len(aArray)
+        aVetor += aArray[nI] + " , "
+    next nI
+ 
+    qout("{" + hb_ValToExp(aVetor) +"}")
+return nil
