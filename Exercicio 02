@@ -1,0 +1,20 @@
+// Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F (9* C + 160) / 5.
+Onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius
+
+Function Main()
+ 
+    Local nTemp := 0
+    Local nFah := 0
+ 
+    ? "Ola, vamos converter graus Celsius em Fahrenheit !"
+    ? ""
+ 
+    ACCEPT "Digite a temperatura em graus Celsius: " TO nTemp
+ 
+    nFah = ((9 * Val(nTemp)) + 160) / 5
+ 
+    QOUT ("")
+    QOUT ("A temperatura em Fahrenheit e: " + Str(nFah))
+    QOUT (" ")
+ 
+    RETURN nil
