@@ -1,0 +1,58 @@
+Faça um programa para cálculo do montante (valor futuro) a partir de um dado capital 
+(valor presente). O programa deverá solicitar ao usuário o valor do capital (valor presente),
+a taxa de juros e o prazo. O programa também deverá permitir que o usuário escolha se quer
+utilizar o regime de capitalização simples ou composto. Ao final apresentar ao usuário o
+montante (valor futuro e o valor dos juros). 
+• Fórmulas: ▪ Juros simples: VF = VP ( 1 + i + n )
+▪ Juros compostos: VF = VP ( 1 + i )^n 
+▪ Juros a partir do VF: J = VF - VP • Onde: 
+▪ VF = Montante ou Valor Futuro
+▪ VP = Capital ou Valor Presente 
+▪ J = Juros ▪ i = taxa em decimal 
+▪ n = prazo
+
+Function Main()
+ 
+    local nVF , nVF2, nVP , nJ  , nPrazo , nValor := 0
+    local cResposta := ""
+    local bFiltro := .t.
+ 
+ 
+    ACCEPT "Qual o valor que deseja calcular: " to nValor
+    ACCEPT "Digite o valor da taxa de juros: " to nJ
+    ACCEPT "Digite o prazo, em mes: " to nPrazo
+ 
+    nValor := val(nValor)
+    nJ     := val(nJ)
+    nPrazo := val(nPrazo)
+ 
+    while (bFiltro)
+        ACCEPT "Quer saber o resultado em juros simples ou composto (S/C)? ou digite ESC para encerrar: " to cResposta
+        cResposta := UPPER(cResposta)
+ 
+        if cResposta == "S"
+        nVF  := simples(nValor , nJ , nPrazo)    
+        QOUT ("O montando de seu valor digitado e: " , alltrim(str(nVF)))
+        break
+         
+        elseif cResposta == "C"  
+        nVF2 := composo(nValor , nJ , nPrazo)  
+        QOUT ("O montante de seu valor digitado e: " , alltrim(str(nVF2)))
+        break
+       
+        elseif cResposta == "ESC"
+        bFiltro := .f.
+ 
+        elseif elseif cResposta <> "S" .or. cResposta <> "C" .or. cResposta <> "P" .or. cResposta <> "ESC"
+ 
+        QOUT("Voce digitou uma opcao invalida, digite S para juros simples, C juros composto ou digite ESC para sair: ")
+            loop
+        endif
+    enddo    
+RETURN nil
+ 
+function simples(nValor , nJ , nPrazo)
+RETURN (nValor * nJ * nPrazo) + nValor
+ 
+function composo(nValor , nJ , nPrazo)
+RETURN nValor * ( 1 + nJ ) ^ nPrazo
