@@ -1,0 +1,34 @@
+Crie uma função chamada “ehPositivo” que descubra se um valor é
+positivo ou negativo (considere o valor zero como positivo) e retorne
+Verdadeiro ou Falso. Use essa função em um programa que calcula o
+módulo de um número informado pelo usuário.
+
+Function Main()
+ 
+    local nValor
+    Local nAux
+ 
+    ACCEPT "Digite um valor : " to nValor
+    nvalor := val(nValor)
+    nAux := nValor
+ 
+While ehPositivo(nValor)
+    QOUT(nAux)
+    break
+Enddo
+While ehPositivo(nValor) <> .t.
+    QOUT (nAux * -1)
+    break    
+Enddo
+ 
+return nil
+ 
+function ehPositivo(nValor)
+ 
+    If nValor >= 0
+        nValor := .t.
+    else
+        nValor := .f.
+    endif
+ 
+RETURN nValor
