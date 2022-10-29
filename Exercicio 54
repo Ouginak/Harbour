@@ -1,0 +1,15 @@
+Faça um programa que calcule a somatória dos dez primeiros números naturais.
+
+Function Main()
+ 
+    Local nNatural := 0
+    Local nN := 0
+    Local nContador := 0
+ 
+    For nNatural := 1 to 10
+        nN := nN + nContador
+        nContador++
+    Next nN
+    QOUT("A soma dos dez primeiros números naturais é: " , alltrim(str(nN)))
+ 
+Return nil
