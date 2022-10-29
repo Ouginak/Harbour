@@ -1,0 +1,31 @@
+Efetuar a leitura de quatro números inteiros e apresentar os números que são divisíveis por 2 ou 3.
+
+Function Main()
+    Local nI    := 0
+    Local aNumeros := {0, 0, 0, 0}
+    Local nNum   := 0.5
+	
+	? “Exercicio 29”
+	? “ “
+ 
+    for nI := 1 to len(aNumeros)
+        while nNum <> Round(nNum, 0)
+            ACCEPT "Digite um numero inteiro: " to nNum
+            nNum := Val(nNum)
+            if nNum <> Round(nNum, 0)
+                QOUT("O numero digitado nao e inteiro")
+                QOUT("")
+            endif
+        enddo
+        aNumeros[nI] := nNum
+        nNum := nNum + 0.5
+    next nI
+ 
+    for nI := 1 to len(aNumeros)
+        if Mod(aNumeros[nI], 2) = 0 .or. Mod(aNumeros[nI], 3) = 0
+            QOUT("Numero divisivel por 2 ou 3:  " + Str(aNumeros[nI]) )
+        endif
+    next nI
+    QOUT("")
+ 
+RETURN nil
