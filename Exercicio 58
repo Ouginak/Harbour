@@ -1,0 +1,58 @@
+Jogo da forca - parte 1: Neste momento trataremos apenas da leitura do palpite (“chute”) do usuário.
+Fazer um programa que realize a consistência de entrada da digitação de um palpite do usuário de modo 
+que ele seja forçado a digitar uma letra efetivamente. Fazer 3 versões do programa, cada uma com uma 
+das estruturas de repetição.
+
+Function Main()
+ 
+    local nCont := 0
+    local cEscolha := ""
+    Local bContinuar := .t.
+   
+    //ENQUANTO
+While (bContinuar)
+    ACCEPT "Digite uma letra ou SAIR para encerrar: " to cEscolha
+    cEscolha := UPPER(cEscolha)
+    while cEscolha == ""
+        ACCEPT "Voce nao tentou nada, escolha uma letra! " to cEscolha
+        loop
+    enddo
+        If cEscolha == "SAIR"
+            bContinuar := .f.
+            Break
+        Endif
+        If Len(cEscolha) > 1
+            QOUT("Apenas 1 letra por vez!")
+            loop
+        Endif
+        If IsAlpha(cEscolha) = .f.
+            QOUT("Burro ! isso nao e uma letra, animal!")
+            loop                
+        Endif
+Enddo
+ 
+ 
+    //Para
+For nCont:= 0 to 1
+    ACCEPT "Digite uma letra ou SAIR para encerrar: " to cEscolha
+    cEscolha := UPPER(cEscolha)
+    If cEscolha == "SAIR"
+        nCont++
+    Else
+        nCont--
+        If cEscolha == ""
+            ACCEPT "Voce nao tentou nada, escolha uma letra! " to cEscolha
+            loop
+        Endif
+        If Len(cEscolha) > 1
+            QOUT("Apenas 1 letra por vez!")
+            loop
+        Endif
+        If IsAlpha(cEscolha) = .f.
+            QOUT("Isso não é uma letra!")
+            loop                
+        Endif
+    Endif
+Next
+ 
+Return nil
