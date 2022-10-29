@@ -1,0 +1,20 @@
+Elaborar um programa que efetue a leitura do nome e do sexo de uma pessoa, apresentando como saída
+uma das seguintes mensagens: "Ilmo. Sr.", para o sexo informado como masculino ou a mensagem 
+"Ilma. Sra. ", para o sexo informado como feminino. Apresente também abaixo da mensagem impressa o nome da pessoa.
+
+Function Main()
+ 
+    local cNome := ""
+    local cSexo := ""
+ 
+ACCEPT "Nome: " to cNome
+ACCEPT "Sexo (M/F): " to cSexo
+ 
+    If cSexo = "M" .or. cSexo = "m"
+        QOUT("Ilmo. Sr." , cNome)
+    Endif
+    If cSexo = "F" .or. cSexo = "f"
+        QOUT("Ilma. Sra." , cNome)
+    Endif
+ 
+Return nil
