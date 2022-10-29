@@ -1,0 +1,31 @@
+Ler a hora de início e a hora de fim de um jogo de Poker (considere apenas horas inteiras, sem os minutos) 
+e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas e que
+o jogo pode iniciar em um dia e terminar no dia seguinte.
+
+Function Main()
+ 
+    local dDia, dNoite
+    local iHI , iHF , iT
+ 
+    ? "Exercicio 32"
+    ? " "
+ 
+    ACCEPT "Dia do inicio do jogo (aaaa/mm/d) : " TO dDia
+    ACCEPT "Dia do fim do jogo (aaaa/mm/d) : " TO dNoite
+    ACCEPT "Digite a hora de inicio do jogo : " TO iHI
+    ACCEPT "Digite a hora do termino do jogo : " TO iHF
+ 
+    if  (val(iHI) + (val(iHF)) > 24 )
+      QOUT("Erro, o jogo nao pode durar mais que 24h")
+    RETURN nil
+    endif
+ 
+    if CToD(dDia) <> CToD(dNoite)
+        iT := ( 24 - val(iHI)) + val(iHF)
+        QOUT ("Seu jogo teve a duracao de: " , alltrim(str((iT))) , "horas")
+    else
+        iT := val(iHF) - val(iHI)
+        QOUT ("Duracao: " , iT, alltrim(str((iT))) , "horas")
+    endif
+ 
+RETURN nil
