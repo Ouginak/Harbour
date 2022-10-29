@@ -1,0 +1,28 @@
+Faça um programa que leia um conjunto de
+notas de alunos de uma determinada turma, anotadas em cartões,
+calcule e exiba a média das notas dos alunos. Sabe-se que a classe
+possui 15 alunos.
+
+Function Main()
+ 
+    local nNota := 0
+    local nSN := 0
+    local nA := 0
+    local nContador := 0
+    local nMedia := 0
+   
+    ACCEPT "Coloque a quantidade de alunos: " TO nA
+        nA := Val(nA)
+   
+    DO WHILE (nContador < nA)
+        ACCEPT "Coloque a nota: " TO nNota
+            nNota := Val(nNota)          
+            nSN := nSN + nNota
+            nContador := nContador + 1
+    ENDDO
+   
+    nMedia := nSN / nA
+   
+     QOUT("A media dos alunos e: " , nMedia)
+   
+Return NIL
