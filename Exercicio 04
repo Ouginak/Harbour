@@ -1,0 +1,21 @@
+Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula: VOLUME = 3,14159 x R2 x ALTURA.
+
+Function Main ()
+ 
+    local nLata := 0
+    local nRaio := 0
+    local nVol := 0
+ 
+    ? "Exercicio 4, calcular o volume de uma lata de oleo"
+    ? ""
+ 
+    ACCEPT "Digite a altura da lata de oleo : " TO nLata
+    ACCEPT "Digite o valor do raio da lata de oleo: " TO nRaio
+ 
+    nVol = ((3.14159 * (Val(nRaio) ^ 2)) * Val(nLata))
+ 
+    QOUT (" ")
+    QOUT ("O valor do volume e: " + Str(nVol))
+    QOUT (" ")
+ 
+    RETURN nil
