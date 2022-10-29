@@ -1,0 +1,47 @@
+Faça um programa que leia um conjunto de notas de alunos anotadas
+em cartões, calcule e exiba a média das notas dos alunos, assim
+como a maior e a menor nota da turma. Deverá funcionar para turma
+com qualquer quantidade de alunos, que sempre corresponderá à
+quantidade de notas armazenadas nos cartões. A tecla “ESC” indica o
+encerramento da série de notas.
+
+Function Main()
+ 
+    Local nCartao := ""
+    Local nMaiornota := 0
+    Local nMenornota := 10
+    local nSomatotal := 0
+    local nTotalalunos := 0
+    local nMedia := 0
+    local bContinuar := .T.
+ 
+   DO WHILE (bContinuar)
+        ACCEPT "Informar a nota ou digite ESC para encerrar: " TO nCartao
+        nCartao := UPPER(nCartao)
+        IF nCartao == "ESC"
+            bContinuar := .F.
+        ELSE
+ 
+            IF Val(nCartao) >= nMaiornota
+                nMaiornota := Val(nCartao)
+            ENDIF
+ 
+            IF Val(nCartao) <= nMenornota
+                nMenornota := Val(nCartao)
+            ENDIF
+ 
+            nSomatotal := nSomatotal + val(nCartao)
+            nTotalalunos := nTotalalunos + 1
+        ENDIF
+       
+    ENDDO
+ 
+nMedia := nSomatotal / nTotalalunos
+ 
+    QOUT("")
+    QOUT("MAIOR NOTA:", nMaiornota)
+    QOUT("MENOR NOTA", nMenornota)
+    QOUT("TOTAL DE ALUNOS:", nTotalalunos )
+    QOUT("MEDIA DAS NOTAS:", nMedia )
+ 
+RETURN nil
