@@ -1,0 +1,27 @@
+Criar um programa de funções com literais e nela disponibilizar as
+funções/procedimentos:
+a. isLetra(c): informa se o caractere enviado é uma letra.
+b. isDigito(c): informa se o caractere enviado é um número.
+c. isSimbolo(c): informa se o caractere enviado é um símbolo.
+d. toLower(c): converte uma letra maiúscula em minúscula.
+e. cTroca(a, b): troca os valores entre as variáveis a e b.
+
+? "*********************************" 
+function isLetra(cC)
+    cC := IsAlpha(cC)
+RETURN cC
+? "*********************************"  
+function isDigito(cC)
+    cC := IsDigit(cC)
+RETURN cC
+? "*********************************"  
+function toLower(cC)
+    cC := Lower(cC)
+RETURN cC
+? "*********************************"  
+procedure cTroca(nValorA , nValorB)
+    local nAux
+    nAux := nValorA
+    nValorA := nValorB
+    nValorB := nAux
+RETURN
