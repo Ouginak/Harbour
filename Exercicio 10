@@ -1,0 +1,17 @@
+ Efetuar a leitura de um número inteiro e apresentar o resultado do quadrado deste número.
+ 
+ Function Main ()
+ 
+    local nNum := 0
+    local nQua := 0
+ 
+    ? "Exercicio 10"
+    ? " "
+   
+    ACCEPT "Digite um numero: " TO nNum
+ 
+    nQua := (Val(nNum) ^ 2)
+ 
+  QOUT ("O valor de" , nNum , "ao quadrado e: " + Alltrim(Str(nQua) ) )
+ 
+RETURN nil
