@@ -1,0 +1,21 @@
+Fazer um programa que leia 10 valores e apresente-os na ordem inversa em que foram digitados
+
+Function Main()
+ 
+    Local nN
+    Local aNum := {}
+    Local nCont := 0
+ 
+    While nCont < 10
+        ACCEPT "Digite um valor: " to nN
+        nN := val(nN)
+        nCont++
+        aAdd(aNum, nN)
+    Enddo
+   
+    While nCont > 0
+        QOUT(aNum[nCont])
+        nCont--
+    Enddo
+ 
+Return nil
