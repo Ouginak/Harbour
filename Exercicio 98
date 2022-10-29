@@ -1,0 +1,13 @@
+Dado um número de 1 até 12, apresentar o número de dias do mês correspondente. Se o número escolhido for 2 (fevereiro), considere 28 dias. Usar vetor. 
+
+Function Main()
+ 
+    local aMes     := {31 , 28 , 31 , 30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31}
+    local nUsuario := 0
+       
+    ACCEPT "Digite um numero entre 1 a 12 : " to nUsuario
+    nUsuario := val(nUsuario)
+   
+    QOUT ((aMes[nUsuario]))
+   
+RETURN nil
