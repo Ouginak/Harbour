@@ -1,0 +1,20 @@
+Elaborar um programa que efetue a apresentação do valor da conversão em dólar (US$) de um valor lido em real (R$).
+O programa deverá solicitar o valor da cotação do dólar e, também, a quantidade de reais disponível com o usuário.
+
+Function Main ()
+ 
+    local nReal := 0
+    local nCota := 0
+    local nDol := 0
+ 
+    ? "Exercicio 13"
+    ? " "
+ 
+    ACCEPT "Digite o valor da cotacao: " TO nCota
+    ACCEPT "Digite o valor que voce possui em Real: " TO nReal
+ 
+    nDol := (Val(nReal) / Val(nCota))
+ 
+    QOUT ("Seu valor em real e " + Alltrim(Str(nDol)) )
+ 
+RETURN nil
