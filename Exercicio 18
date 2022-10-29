@@ -1,0 +1,18 @@
+Elaborar um programa que efetue a leitura de um determinado valor e apresente-o caso este não seja maior que três.
+
+Function Main()
+ 
+    Local nNum := 0
+ 
+    ? "Exercicio 20"
+    ? " "
+   
+    ACCEPT "Digite um número: " to nNum
+ 
+    If val(nNum) > 3
+    QOUT("Erro, seu numero e maior que 3")
+    Else
+    QOUT("Seu numero e: " , nNum)
+    Endif
+ 
+Return nil
