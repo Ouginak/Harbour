@@ -1,0 +1,21 @@
+Escreva um algoritmo para mostrar o sucessor e o antecessor de um
+número qualquer informado pelo usuário. Tanto o antecessor como o
+sucessor deverão ser obtidos através de funções respectivas.
+
+Function Main()
+ 
+    Local nNum, nSu, nA
+ 
+    ACCEPT "Digite um valor: " to nNum
+    nNum := val(nNum)
+    nSu := Sucessor(nNum)
+    nA := Antecessor(nNum)
+    QOUT("Para " , nNum , " o sucessor e " , alltrim(str(nSu)) , " e o antecessor e " , alltrim(str(nA)))
+ 
+Return nil
+ 
+Static function Sucessor(nNum)
+Return nNum + 1
+ 
+Static function Antecessor(nNum)
+Return nNum - 1
