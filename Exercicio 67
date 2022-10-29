@@ -1,0 +1,18 @@
+Fazer um programa que dado um número inteiro positivo, informado pelo usuário, calcule n e exiba o seu fatorial.
+
+Function Main()
+ 
+local nResult := 1
+local nF := 0
+local nI := 0
+ 
+ACCEPT "Digite um numero para calcular o seu fatorial: " to nF
+nF := val(nF)
+ 
+for nI := 1 to nF
+    nResult := nResult * nI
+    next nF
+ 
+QOUT (round(nResult,0))
+ 
+RETURN nil
