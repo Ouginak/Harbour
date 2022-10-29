@@ -1,0 +1,13 @@
+Elaborar um programa que popule um vetor de 30 posições com valores de 1 até 30. Exibir o conteúdo do vetor.
+
+Function Main()
+ 
+    Local nI := 1
+    Local aDados := {}
+ 
+    For nI := nI to 30
+    aAdd(aDados, nI)
+    Next
+QOUT(hb_ValtoExp(aDados))
+ 
+Return nil
