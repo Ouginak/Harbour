@@ -1,0 +1,18 @@
+Elaborar um programa que exiba, na tela, todos os caracteres visuais da tabela ASCII (do 32 ao 126) 
+no formato “código – caractere”. Exemplo: “80 – P”. Fazer 2 versões desta solução: uma utilizando
+laço com pré-teste (enquanto), outra usando laço finito (para).
+
+function main()
+ 
+    local nCount := 32
+ 
+    while nCount <= 126
+        QOUT(nCount , "-" , CHR(nCount))
+        nCount++
+    enddo
+    ? "***************************************"
+    for nCount := 32 TO 126
+            QOUT (nCount , " - " , CHR(nCount))
+        next nCount    
+ 
+return nil
