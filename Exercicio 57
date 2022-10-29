@@ -1,0 +1,43 @@
+Desenvolver uma máquina de soma (cálculo de somatório). O programa deverá ler uma série indefinida
+de valores informados pelo usuário. A leitura deverá prosseguir até que o valor zero seja informado.
+Ao final apresentar na tela o total do somatório. Implementar uma versão com cada uma das três 
+estruturas de repetição e mais uma utilizando o desvio incondicional.
+
+Function Main()
+ 
+    local nNum1 , nNum2 , nSoma
+ 
+    ACCEPT "Digite um valor a ser somado: " to nNum1
+        nNum1 := Val(nNum1)
+ 
+    ACCEPT "Digite outro valor a ser somado: " to nNum2
+        nNum2 := Val(nNum2)
+ 
+    nSoma := nNum1 + nNum2
+ 
+        While nNum2 <> 0
+            ACCEPT "Digite outro valor a ser somado: " TO nNum2
+            nNum2 := val(nNum2)
+            nSoma += nNum2
+        Enddo
+ 
+    QOUT ("O total é: " , alltrim(str(nSoma)))
+ 
+ 
+RETURN nil
+ 
+//     Function Main()
+   
+//         local nCount := 0
+//         local nNum := 0
+//         local nAux := 0
+       
+//         for nCount:=1 to 2
+//             ACCEPT "Informe um número: " to nNum
+//             nNum:=Val(nNum)
+//             nAux:=nAux+nNum
+//             if nNum == 0
+//                 nCount := 2
+//             else
+//                 nCount := 1
+//             end if
