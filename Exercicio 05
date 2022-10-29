@@ -1,0 +1,30 @@
+Efetuar o cálculo da quantidade de litros de combustível gastos em uma viagem, utilizando-se um automóvel que 
+faz 12 Km por litro. Para obter o cálculo, o usuário deverá fornecer o tempo gasto na viagem e a velocidade média 
+durante a mesma. Desta forma, será possível obter a distância percorrida com a fórmula DIST NCIA = TEMPO x VELOCIDADE.
+Tendo o valor da distância, basta calcular a quantidade de litros de combustível utilizada na viagem com a fórmula:
+LITROS_USADOS = DIST NCIA / 12. O programa deverá apresentar os valores da velocidade média, tempo gasto na vigem,a 
+distância percorrida e a quantidade de litros utilizada na viagem.
+
+Function Main ()
+ 
+    local nTemp := 0
+    local nVelo := 0
+    local nDisPe := 0
+    local nQC := 0
+ 
+    ? "Exercicio 5"
+    ? " "
+ 
+    ACCEPT "Digite o tempo gasto na viagem: " TO nTemp
+    ACCEPT "Digite a velocidade media na viagem: " TO nVelo
+ 
+    nDisPe := (Val(nTemp) * Val(nVelo))
+    nQC := (nDisPe / 12)
+ 
+     QOUT ("A velocidade media foi de: ", nVelo)
+     QOUT ("O tempo gasto na viagem foi de: " , nTemp)
+     QOUT ("A distancia percorrida foi de: " , nDisPe , "km")
+     QOUT ("A quantidade de litros de combustivel utilizado foi de: " , nQC)
+     QOUT (" ")
+ 
+RETURN nil
