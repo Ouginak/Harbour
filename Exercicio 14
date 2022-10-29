@@ -1,0 +1,20 @@
+Elaborar um programa que efetue a leitura de três valores. (A, B e C) e apresente como resultado final a soma dos quadrados dos três valores lidos
+
+Function Main()
+ 
+    local nA := 0
+    local nB := 0
+    local nC := 0
+    local nResu := 0
+ 
+    ? "Exercicio 14"
+    ? " "
+    ACCEPT "Digite um valor para A: " TO nA
+    ACCEPT "Digite um valor para B: " TO nB
+    ACCEPT "Digite um valor para C: " TO nC
+ 
+    nResu := ((Val(nA) ^ 2) + (Val(nB) ^ 2) + ((Val(nC) ^ 3)) )
+ 
+    QOUT ("O resultado da soma dos quadrados de" , nA , "," , nB , "," , nC , "e: " + Alltrim(Str(nResu)))
+ 
+    RETURN nil
