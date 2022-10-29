@@ -1,0 +1,16 @@
+Dado um caractere qualquer, verificar se ele é uma voga
+
+Function Main()
+ 
+    Local cLetra := ""
+
+ACCEPT "Aperte uma vogal: " to cLetra
+    cLetra := UPPER(cLetra)
+ 
+    If cLetra <> "A" .and. cLetra <> "E" .and. cLetra <> "I" .and. cLetra <> "O" .and. cLetra <> "U"
+    QOUT(cLetra , "não é uma vogal!")
+    Else
+    QOUT(cLetra , "é uma vogal")
+    Endif
+ 
+Return nil
