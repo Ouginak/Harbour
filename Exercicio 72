@@ -1,0 +1,33 @@
+Para cada uma das séries abaixo, elabore um programa que calcule o valor de Z. O valor de n deverá ser informado pelo usuário:
+
+function main()
+ 
+local nSoma := 0
+local nDividendo, nDivisor, nZ, nN , nI
+ 
+    ACCEPT "Informe o valor de 'N': " TO nN
+    nN := val(nN)
+ 
+    QOUT("a)")
+    for nI := 1 to nN
+        nSoma += (1 / nI)
+    next nI
+    QOUT(" Z = "+ AllTrim(str(nSoma)))
+ 
+ 
+    nSoma := 0
+    QOUT("b)")
+    for nI := 1 to nN
+        nSoma += (nI / ((nN-nI)+1))
+    next nI
+    QOUT(" Z = "+ AllTrim(str(nSoma)))
+ 
+ 
+    nSoma := 0
+    QOUT("c)")
+    for nI := 1 to nN
+        nSoma += (nI / (nI*2))
+    next nI
+    QOUT(" Z = "+ AllTrim(str(nSoma)))
+ 
+return nil
