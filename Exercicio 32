@@ -1,0 +1,17 @@
+Ler um valor e escrever se é positivo, negativo ou zero.
+
+Function Main ()
+ 
+Local nNum := 0
+
+ACCEPT "Digite um número: " to nNum
+ 
+  If val(nNum) = 0
+    QOUT((nNUm) , "é zero")
+  Elseif val(nNum) > 0
+    QOUT((nNUm) , "é positivo")
+  Else
+    QOUT((nNUm) , "é negativo")
+  Endif
+ 
+Return nil
