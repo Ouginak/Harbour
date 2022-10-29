@@ -1,0 +1,32 @@
+Elaborar um programa que exiba na tela, automaticamente, valores gerados aleatoriamente, entre 10 e 99.
+Os valores deverão ser gerados indefinidamente até que surja o valor 80, que ao surgir não deve ser exibido
+na tela. Fazer 3 versões desta solução: uma utilizando laço com pré-teste (enquanto), outra usando laço 
+com pós-teste (repita) e uma última usando laço finito (para). 
+OBS: No Harbour, Clipper, não existe o "repita".
+
+Function Main()
+ 
+    Local nN
+    Local aNum := {}
+    Local nCont := 0
+ 
+    Do while nN <> 80
+    nN := hb_RandomInt(10 , 99)
+    If nN = 80
+        Break
+    Else
+        QOUT(nN)
+    Endif
+    Enddo
+ 
+    For nCont := 10 to 0 step(-1)
+        nN := hb_RandomInt(10 , 99)
+        nCont++        
+         If nN = 80
+           Break
+        Endif
+        QOUT(nN)
+    Next nN
+   
+ 
+Return nil
