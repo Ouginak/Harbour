@@ -1,0 +1,16 @@
+Elaborar um programa que calcule a raiz real de uma equação de 1º grau, informados os valores do coeficiente de x (a) e do elemento neutro (b).
+
+Function Main()
+ 
+    local nX := 0
+    local nA := 0
+    local nB := 0
+ 
+    ACCEPT "Digite um valor para A: " TO nA
+    ACCEPT "Digite um valor para B: " TO nB
+ 
+    nX := (- val(nB)) / val(nA)
+ 
+    QOUT ("O resultado da raiz da equacao de primeiro grau e: " , alltrim(Str(nX)))
+ 
+    RETURN nil
