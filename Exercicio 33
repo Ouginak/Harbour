@@ -1,0 +1,36 @@
+Faça um algoritmo para ler um nome de usuário (user name) e uma senha. Caso correspondam aos dados 
+armazenados internamente no programa através do uso de constantes (“chumbado”), deve ser apresentada
+a mensagem “Acesso permitido”. Caso o usuário/senha não coincidam, exibir a mensagem “Usuário ou 
+senha inválido”. A verificação da senha só deverá ocorrer caso o usuário coincida, porém o usuário 
+não deve saber especificamente se foi o nome de usuário ou a senha que não coincidiu.
+
+#Define PW 123456
+#Define User "~Leandro"
+ 
+Function Main()
+    Local cLog := ""
+    Local nPass := 0
+    Local nCount := 0
+  
+While nCount < 3
+ 
+ACCEPT "Digite seu logging: " to cLog
+ACCEPT "Digite sua senha: " to nPass
+nPass := val(nPass)
+ 
+If nPass <> PW .or. cLog <> User
+ 
+            QOUT("Usuário ou senha inválidos!")
+            nCount++
+ 
+        Else
+ 
+            QOUT("Acesso autorizado!")
+            BREAK
+ 
+        Endif
+    Enddo
+ 
+    QOUT("Tentativas esgotadas!")
+ 
+return nil
