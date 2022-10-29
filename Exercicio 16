@@ -1,0 +1,17 @@
+// Elaborar um programa que apresente o produto da soma pela diferença do quadrado de dois valores lidos.
+
+Function Main()
+ 
+    local nA := 0
+    local nB := 0
+    local nResu := 0
+    local nResu2 := 0
+ 
+    ? "Exercicio 16"
+ACCEPT "Digite um valor para A: " TO nA
+    ACCEPT "Digite um valor para B: " TO nB
+     nResu := (((Val(nA) ^ 2) + (Val(nB) ^ 2)) * ((Val(nA) ^ 2) - (Val(nB) ^ 2)))
+   
+    QOUT ("O resultado e: ", Alltrim(Str(nResu)))
+ 
+RETURN nil
