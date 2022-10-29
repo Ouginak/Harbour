@@ -1,0 +1,26 @@
+Elaborar um jogo do tipo adivinha o número. Onde deverá ser sorteado um número entre 0 e 100.
+Em seguida solicitado que o usuário adivinhe qual foi o número sorteado. Após o “chute” do
+usuário apresentar uma mensagem informando se o número sorteado é maior, menor ou igual ao 
+número “chutado”.
+
+Function Main()
+ 
+    local n1, nAle
+ 
+    ACCEPT "Digite um numero de 0 a 100: " TO n1
+ 
+    n1 := val(n1)
+ 
+    nAle := HB_RandomInt(0 , 100)
+ 
+    if n1 > HB_RandomInt(nAle)
+        QOUT("Voce errou, o numero digitado é maior que o sorteado")
+    return .t.
+    endif
+    if n1 < HB_RandomInt(nAle)
+        QOUT("Voce errou, o numero digitado é menor que o sorteado")
+    else      
+        QOUT("Parabens ! Voce acertou ! ! ! O seu premio é um inacreditavel nada ! :)")
+    endif
+ 
+RETURN nil
