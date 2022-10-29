@@ -1,0 +1,24 @@
+Carregar um vetor com 50 caracteres gerados aleatoriamente (randômicos). Serão válidos
+apenas caracteres que representem letras maiúsculas de “A” até “Z”. A carga do vetor 
+deverá ser feita através de uma sub-rotina que é chamada automaticamente no programa 
+principal. Os caracteres podem se repetir.
+
+Function Main()
+ 
+    local aMatriz := {}
+ 
+    aleatorio(aMatriz)
+ 
+    QOUT(hb_valtoexp(aMatriz))
+ 
+RETURN nil
+ 
+function aleatorio(aMatriz , nI, nAux)
+ 
+    for nI := 1 to 50
+        nAux := hb_RandomInt(65 , 90)
+        nAux := CHR(nAux)
+        aAdd(aMatriz , nAux)
+    next
+ 
+RETURN aMatriz
