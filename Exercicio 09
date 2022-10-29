@@ -1,0 +1,21 @@
+Ler dois valores para as variáveis A e B, efetuar a troca dos valores de forma que a variável
+A passe a possuir o valor da variável B e que a variável B passe a possuir o valor da variável A.
+Apresentar os valores trocados.Os valores devem ser efetivamente trocados nas respectivas variáveis.
+
+Function Main ()
+ 
+    local nA := 0
+    local nB := 0
+    local nAUX := 0
+ 
+    ACCEPT "Digite um valor para A: " TO nA
+    ACCEPT "Digite um valor para B: " TO nB
+ 
+    nAUX := nA
+    nA := nB
+    nB := nAUX
+ 
+    QOUT ("Seu novo valor para A e: " , nA )
+    QOUT ("Seu novo valor para B e: " , nB )
+ 
+    RETURN nil
