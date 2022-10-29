@@ -1,0 +1,48 @@
+Criar um programa de funções com literais e nela disponibilizar as
+funções:
+a. iTroca(a, b): troca os valores entre as variáveis a e b.
+b. isPar(x): informa se o inteiro enviado é um número par.
+c. isImPar(x): informa se o inteiro enviado é um número ímpar.
+d. Inverte(x): retorna o número com sinal invertido.
+e. isDiv(a, b): retorna se a é divisível por b.
+
+procedure iTroca(nValorA , nValorB)
+    local nAux
+    nAux := nValorA
+    nValorA := nValorB
+    nValorB := nAux
+RETURN
+? "***************************************************" 
+procedure isPar(nValorA)
+   
+    if (nValorA % 2 == 0)
+        QOUT ("O numero" , nValorA , "e par")
+    Else
+        QOUT ("O numero" , nValorA , "e impar")
+    endif
+RETURN        
+? "***************************************************" 
+procedure isImpar(nValorA)
+ 
+    if (nValorA % 2 == 1)
+        QOUT ("O numero" , nValorA , "e impar")
+    Else
+        QOUT ("O numero" , nValorA , "e par")
+    endif
+RETURN
+? "***************************************************" 
+function Inverte(nValorA)
+ 
+    local nValorB
+    nValorB := nValorA * (-1)  
+ 
+RETURN nValorB
+? "***************************************************" 
+procedure isDiv(nValorA , nValorB)
+ 
+    if ((nValorA % nValorB) == 0)
+        QOUT ("O numero" , nValorA , "e divisivel por " , nValorB)
+    Else
+        QOUT ("O numero" , nValorA , "nao e divisivel por " , nValorB)
+    endif
+RETURN
