@@ -1,0 +1,22 @@
+Fazer um programa que apresente invertida uma palavra informada
+pelo usuário. Informar também se é ou não um palíndromo.
+
+Function Main()
+ 
+    local cPalavra := ""
+    local cInverso := ""
+    local nI := 0
+   
+ACCEPT "Insira uma palavra: " to cPalavra
+   
+    For nI := 1 to len(cPalavra)
+        cInverso += SubStr(cPalavra, len(cPalavra) - nI + 1, 1)
+    Next nI
+QOUT("O inverso é:", cInverso)  
+    If cPalavra == cInverso
+        QOUT("E", cPalavra, "é um palíndromo")
+    Else
+        QOUT("E", cPalavra, "não é um palíndromo")    
+    Endif
+ 
+Return nil
