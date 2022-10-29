@@ -1,0 +1,40 @@
+Ler 10 elementos de uma matriz tipo vetor e apresentá-los na ordem inversa em que foram lidos e armazenados.
+
+Function Main()
+ 
+    local aMatriz  := {}
+    local nI := 0
+    local cUsuario := ""
+ 
+    For nI := 1 to 10
+        ACCEPT "Entre com um elemento: " to cUsuario
+        aAdd(aMatriz, cUsuario)
+    Next nI
+       
+    ListaMatriz(aMatriz)
+    ? " "
+    ? "Agora o inverso"
+    ? " "
+    ListaMatriz(aMatriz, .t. )
+   
+RETURN nil
+ 
+static function ListaMatriz(aMatriz , lInverte)
+ 
+    local nI := 1
+ 
+    if lInverte = nil
+        lInverte := .F.
+    endif
+ 
+    if lInverte
+        for nI := len(aMatriz) to 1 step -1
+            QOUT (aMatriz[nI])
+        next
+    else
+        for nI := 1 to len(aMatriz)
+            QOUT (aMatriz[nI])
+        next
+    endif
+ 
+RETURN nil
