@@ -1,0 +1,22 @@
+Ler 10 elementos de uma matriz tipo vetor e apresentá-los depois de todos serem lidos.
+
+Function Main()
+ 
+    local aDados := {}
+    local cNome  := ""
+    local nI     := 0
+    local nC  := 0
+ 
+    For nI := 1 to 10
+        ACCEPT "Entre com o elemento: " to cNome
+            If Empty(cNome)
+                ?"Voce nao digitou nada, tente novamente."
+                nI--
+            Else
+                aAdd(aDados, cNome)
+            Endif
+    Next
+ 
+QOUT(hb_ValtoExp(aDados))
+ 
+Return nil
