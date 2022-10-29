@@ -1,0 +1,27 @@
+Dados um caractere qualquer, verificar e informar se ele é uma vogal, um dígito numérico ou um símbolo.
+
+Function Main()
+ 
+    local c1 := ""
+ 
+    ACCEPT ("Digite um caractere qualquer: ") TO c1
+    c1 := UPPER(c1)
+ 
+    if c1 = "1" .or. c1 = "2" .or. c1 = "3" .or. c1 = "4" .or. c1 = "5" .or. c1 = "6" .or. c1 ="7" .or. c1 = "8" .or. c1 = "9" .or. c1 = "0"
+        QOUT("Voce digitou um numero")
+    return .t.
+    endif
+ 
+    if c1 = "A" .or. c1 = "E" .or. c1 = "I" .or. c1 = "O" .or. c1 ="U"
+        QOUT("Voce digitou uma vogal")
+    return .t.
+    endif
+ 
+    iF c1 = "B" .or. c1 = "C".or. c1 = "D".or. c1 = "F".or. c1 = "G".or. c1 = "H".or. c1 = "J".or. c1 = "K".or. c1 = "L".or. c1 = "M".or. c1 = "N".or. c1 = "P".or. c1 = "Q".or. c1 = "R".or. c1 = "S".or. c1 = "T".or. c1 = "U".or. c1 = "V".or. c1 = "W".or. c1 = "Y".or. c1 = "X".or. c1 = "Z"
+        QOUT("Voce digitou uma consoante")
+   
+    else
+    QOUT ("Voce digitou um simbolo")
+    endif    
+ 
+RETURN nil
