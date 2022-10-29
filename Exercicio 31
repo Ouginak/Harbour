@@ -1,0 +1,29 @@
+A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar
+mais de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um 
+acréscimo de 50%. Escreva um algoritmo que leia o número de horas trabalhadas em um mês,
+o salário por hora e escreva o salário total do funcionário, que deverá ser acrescido das 
+horas extras, caso tenham sido trabalhadas (considere que o mês possua 4 semanas exatas).
+
+Function Main()
+ 
+local cF := ""
+local nSem, nSem2, nSem3, nSem4, nR, nR2 , nSa
+
+ACCEPT "Digite o nome do funcionario: " TO cF
+ACCEPT "Digite qual o valor ganho por horas: " TO nSa
+ACCEPT "Digite quantas horas o funcionario trabalhou na semana 1 : " TO nSem
+ACCEPT "Digite quantas horas o funcionario trabalhou na semana 2 : " TO nSem2
+ACCEPT "Digite quantas horas o funcionario trabalhou na semana 3 : " TO nSem3
+ACCEPT "Digite quantas horas o funcionario trabalhou na semana 4 : " TO nSem4
+ 
+nR := (val(nSem) + val(nSem2) + val(nSem3) + val(nSem4))
+ 
+    if val(nR) > 160
+        nR2 := (((val(nR) - 160) * 1.5) + 160) * val(nSa)
+        QOUT ("O funcionario " , cF , "recebeu horas extras! seu salario este mes e: " , alltrim(str(nR2)))
+    else
+        nSa := nR
+        QOUT ("O funcionario" , cF , "recebeu este mes o salario normal, no total de: " , alltrim(str(nR2)))
+    endif
+ 
+RETURN nil
