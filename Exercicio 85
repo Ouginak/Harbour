@@ -1,0 +1,21 @@
+Como sabemos, o Harbour/ADVPL não possui uma função para cálculo
+de potência. Crie uma função “POT”, que receba como parâmetros a
+base e o expoente e retorne o valor da potência.
+
+Function Main()
+ 
+    Local nValor1, nValor2, nPot
+ 
+    ACCEPT "Digite o valor da base: " to nValor1
+    ACCEPT "Digite o valor da potência: " to nValor2
+ 
+    nValor1 := val(nValor1)
+    nValor2 := val(nValor2)
+    nPot := POT(nValor1, nValor2)
+ 
+    QOUT(nValor1 , " elevado a " , nValor2 , " é igual a " , alltrim(STR(nPot)))
+ 
+Return nil
+ 
+    Static Function POT(nValor1 , nValor2)
+    Return nValor1 ^ nValor2
