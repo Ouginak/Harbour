@@ -1,0 +1,19 @@
+Function Main()
+ 
+    local n1 , n2 , n3 , nR
+ 
+    ACCEPT "Digite o primeiro valor: " to n1
+    ACCEPT "Digite o segundo valor : " to n2
+    ACCEPT "Digite o terceiro valor : " to n3
+    n1 := val(n1)
+    n2 := val(n2)
+    n3 := val(n3)
+ 
+    nR := media(n1 , n2 , n3)
+ 
+    QOUT ("A media dos numeros informados e: " , alltrim(str(nR)))
+ 
+RETURN nil
+ 
+Function media(n1 , n2 , n3)
+RETURN (n1 + n2 + n3 ) / 3
