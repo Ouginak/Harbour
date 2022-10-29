@@ -1,0 +1,13 @@
+Faça um programa que calcule a somatória dos dez primeiros números naturais pares
+
+Function Main()
+ 
+    Local nS := 0
+    Local n1 := 2
+    Local nA := 20
+    local nN := 10
+ 
+    nS := (n1 + nA) * (nN/2)
+    QOUT (round(nS, 0))
+ 
+Return nil
