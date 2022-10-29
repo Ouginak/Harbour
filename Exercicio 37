@@ -1,0 +1,19 @@
+Dada uma data informada pelo usuário indicar ordinalmente o dia do ano que ela representa 
+do 1º dia ao 365º/366º (conforme o ano for ou não bissexto). O usuário informará 
+separadamente dos valores do dia, do mês e do ano pesquisado.
+
+Function Main()
+ 
+    Local aD := {}
+    Local nAno , nMes , nDia
+  
+    ACCEPT "Digite o ano (aaaa): " to nAno
+    aAdd(aD, Val(nAno))
+    ACCEPT "Digite um mes (número de 1 a 12): " to nMes
+    aAdd(aD, Val(nMes))
+    ACCEPT "Digite o dia: " to nDia
+    aAdd(aD, Val(nDia))
+ 
+  QOUT((CtoD(hb_ValToExp(aD))) , " eh o " , alltrim(str(DoY(CtoD(hb_ValToExp(aD))))) ,  " dia do ano")
+ 
+Return nil
