@@ -1,0 +1,20 @@
+Ler duas matrizes A e B do tipo vetor com 20 elementos. Construir uma matriz C, onde cada
+elemento de C é a subtração do elemento correspondente de A com B. Apresentar a matriz C. 
+
+Function Main()
+ 
+    Local nI
+    local aMatriz1 := {3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41}
+    local aMatriz2 := {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+    Local aMatriz3 := {}
+    Local nCont := 8
+    Local nSub
+ 
+        for nI := 1 to 20
+        nSub := aMatriz1[nI]-aMatriz2[nI]
+        aAdd(aMatriz3, nSub)
+        Next
+ 
+        QOUT(hb_ValtoExp(aMatriz3))
+ 
+Return nil
