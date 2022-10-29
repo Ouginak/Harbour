@@ -1,0 +1,24 @@
+Implementar um procedimento que dado o dividendo e o divisor de
+uma divisão, calcule tanto o quociente como o resto da divisão inteira. O
+resultado não deverá ser exibido pelo procedimento. Deverá ficar
+disponível para ser exibido ou manipulado pelo programa principal.
+
+Function Main()
+ 
+    local nDividendo := 0
+    local nDivisor   := 0
+    local nResposta  := 0
+ 
+ACCEPT "Digite um valor para o dividendo: " to nDividendo
+ACCEPT "Digite um valor para o divisor: "   to nDivisor
+    nDividendo := val(nDividendo)
+    nDivisor   := val(nDivisor)
+ 
+   nResposta :=  Calculo(nDividendo , nDivisor)
+ 
+    QOUT ("O resultado da divisao é: " , alltrim(str(nResposta)))
+ 
+Return nil
+ 
+Static function Calculo (nDividendo, nDivisor)
+Return nDividendo / nDivisor
