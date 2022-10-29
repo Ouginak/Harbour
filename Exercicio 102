@@ -1,0 +1,19 @@
+Ler dois vetores A e B, de 20 elementos cada e calcular um terceiro, C, onde cada elemento
+será a soma dos correspondentes em A e B. Apresentar o vetor resultante.
+
+Function Main()
+ 
+    local aVetor1 := {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+    local aVetor2 := {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+    local aVetor3 := {}
+    Local nCont := 8
+    Local nSoma
+    local nI
+ 
+        for nI := 1 to 20
+        nSoma := aVetor1[nI]+aVetor2[nI]
+        aAdd(aVetor3, nSoma)
+        Next
+ 
+        QOUT(hb_ValtoExp(aVetor3))
+    Return nil
