@@ -1,0 +1,28 @@
+Elaborar um programa que exiba na tela automaticamente todos os números naturais entre 100 e 0, 
+em ordem decrescente. Fazer 3 versões desta solução: uma utilizando laço com pré-teste (enquanto),
+outra usando laço com pós-teste (repita) e uma última usando laço finito (para).
+
+Function Main()
+ 
+    local n1 := 0
+    local n2 := 100
+    local n3 := 101
+
+    while n3 <> 0
+    if n3 > 0
+        n3--
+        QOUT(n3)
+        loop
+    endif
+    enddo
+   
+    For n1 := 100 TO 0 step(-1)
+        QOUT (n1)
+    next n1
+ 
+    While n2 >= 0
+         QOUT(n2)
+           n2--
+     Enddo
+ 
+RETURN nil
