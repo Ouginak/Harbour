@@ -1,0 +1,31 @@
+Ler três valores para os lados de um triângulo, considerando lados como: A, B e C. 
+Verificar se os lados fornecidos formam realmente um triângulo (teste de verificação),
+e se for esta condição verdadeira, deverá ser indicado qual tipo de triângulo foi
+formado: isósceles, escaleno ou equilátero. Dica: para saber se um conjunto de três 
+segmentos de reta formas um triângulo basta verificar que cada a medida de cada um dos
+segmentos (lados) seja menor do que a soma dos outros dois.
+
+Function Main()
+ 
+    Local nLadoA , nLadoB , nLadoC
+  
+ACCEPT "Digite o valor do lado A: " to nLadoA
+ACCEPT "Digite o valor do lado B: " to nLadoB
+ACCEPT "Digite o valor do lado C: " to nLadoC
+ 
+If nLadoA < (nLadoB + nLadoC) .and. nLadoB < (nLadoA + nLadoC) .and. nLadoC < (nLadoA + nLadoB) = .t.
+    QOUT("E um triangulo")
+       If val(nLadoA) == val(nLadoB) .and. val(nLadoA) == val(nLadoC)
+        QOUT("O triângulo é equilátero")
+            Elseif val(nLadoA) <> val(nLadoB) .and. val(nLadoA) <> val(nLadoC) .and. val(nLadoB) <> val(nLadoC)
+                QOUT("O triângulo é escaleno")
+                    Else
+                        QOUT("O triângulo é isoceles")
+Endif
+ 
+    Else
+        QOUT("Nao e um triangulo")
+    Return nil
+endif
+ 
+Return nil
