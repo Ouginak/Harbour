@@ -1,0 +1,42 @@
+Elaborar um programa que exiba na tela automaticamente todos os múltiplos de um determinado número
+informado pelo usuário, existentes entre 1 e um limite, que também deverá ser informado pelo usuário.
+Fazer duas versões da solução utilizando diferentes estruturas de repetição, a sua escolha.
+
+Function Main()
+ 
+    Local nN := 0
+    Local nN2 := 0
+    Local nLim := 0
+    Local nCont := 0
+    Local nLeng := 0
+    Local aNum := {}
+ 
+ACCEPT "Digite um número: " to nN
+ACCEPT "Digite o limite: " to nLim
+    nN := val(nN)
+    nLim := val(nLim)
+ 
+    //ENQUANTO
+    While nN2 < nLim
+    nN2 := nCont++
+        If nN2%nN == 0 .and. nN2 >= nN
+            aAdd(aNum, nN2)
+            nLeng++
+        Else
+            nLeng--
+        Endif
+    Enddo
+        QOUT(hb_valtoexp(aNum))
+ 
+ 
+    // //PARA
+    For nLeng := 1 to nLim+1
+    nN2 := nCont
+    nCont++
+        If nN2%nN == 0 .and. nN2 >= nN
+            aAdd(aNum, nN2)
+        Endif
+    Next
+        QOUT(hb_valtoexp(aNum))
+ 
+Return nil
