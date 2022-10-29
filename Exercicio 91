@@ -1,0 +1,55 @@
+Na mesma linha do programa anterior fazer uma função para cálculo
+do valor presente, dado o montante e a taxa.
+
+Function Main()
+ 
+    local nVF , nVF2, nVF3 , nVP , nJ , nI , nPrazo , nValor := 0
+    local cResposta := ""
+    local bFiltro := .t.
+ 
+ 
+    ACCEPT "Qual o valor que deseja calcular: " to nValor
+    ACCEPT "Digite o valor da taxa de juros: " to nJ
+    ACCEPT "Digite o prazo, em mes: " to nPrazo
+ 
+    nValor := val(nValor)
+    nJ     := val(nJ)
+    nPrazo := val(nPrazo)
+ 
+    while (bFiltro)
+        ACCEPT "Quer saber o resultado em juros simples, composto, ou valor presente (S/C/P)? ou digite ESC para encerrar: " to cResposta
+        cResposta := UPPER(cResposta)
+ 
+        if cResposta == "S"
+        nVF  := simples(nValor , nJ , nPrazo)    
+        QOUT ("O montando de seu valor digitado e: " , alltrim(str(nVF)))
+        break
+         
+        elseif cResposta == "C"  
+        nVF2 := composo(nValor , nJ , nPrazo)  
+        QOUT ("O montante de seu valor digitado e: " , alltrim(str(nVF2)))
+        break
+       
+        elseif cResposta == "P"
+        nVF3 := presente(nValor , nJ , nPrazo)
+        QOUT ("O valor presente e: " , alltrim(str(nVF3)))
+        break
+ 
+        elseif cResposta == "ESC"
+        bFiltro := .f.
+ 
+        elseif cResposta <> "S" .or. cResposta <> "C" .or. cResposta <> "ESC"
+        QOUT("Voce digitou uma opcao invalida, digite S para juros simples, C juros composto ou digite ESC para sair: ")
+            loop
+        endif
+    enddo    
+RETURN nil
+ 
+function simples(nValor , nJ , nPrazo)
+RETURN (nValor * nJ * nPrazo) + nValor
+ 
+function composo(nValor , nJ , nPrazo)
+RETURN nValor * ( 1 + nJ ) ^ nPrazo
+ 
+function presente(nValor , nJ , nPrazo)
+RETURN nValor / (1 + nJ) * nPrazo
