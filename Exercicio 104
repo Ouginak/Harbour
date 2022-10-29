@@ -1,0 +1,27 @@
+Ler um vetor A de 15 elementos e a partir dele construir um vetor B de mesmo tamanho,
+sendo o inverso de A, ou seja, o primeiro elemento de B deverá receber o último de A
+o segundo de B deverá receber o penúltimo de A e assim por diante.
+
+Function Main()
+ 
+    Local nN
+    Local aA := {}
+    Local aB := {}
+    Local nCont := 0
+ 
+    Do while nCont < 15
+ ACCEPT "Digite um valor: " to nN
+    nCont++
+    aAdd(aA, nN)
+    Enddo
+ 
+ QOUT("Os valores digitados são: " , hb_ValtoExp(aA))
+?" "  
+    While nCont > 0
+    aAdd(aB, aA[nCont])
+    nCont--
+    Enddo
+ 
+QOUT("Na ordem inversa temos: " , hb_ValtoExp(aB))
+?" "
+Return nil
