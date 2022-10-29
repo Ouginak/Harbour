@@ -1,0 +1,41 @@
+Nas olimpíadas deste ano, anotou-se em
+cartões cada uma das medalhas de ouro, prata e bronze, obtidas por
+um determinado país. Faça um programa que leia esses cartões e
+exiba o quadro completo de medalhas obtidas pela delegação do
+país. O cartão com o conteúdo “F” indica que é o último da pilha.
+
+Function Main()
+ 
+    Local nC := ""
+    Local nOuro := 0
+    Local nPrata := 0
+    Local nBronze := 0
+    Local nTotal := 0
+    local cContinuar := .T.
+ 
+   DO WHILE (cContinuar) 
+         ACCEPT "Informar o tipo de medalha: " TO nC
+ 
+        IF (nC == "F" .or. nC == "f")
+        cContinuar := .F.
+        ELSEIF (nC == "P" .or. nC == "p")
+        nPrata := nPrata +1
+        nTotal := nTotal +1
+        ELSEIF (nC == "O" .or. nC == "o")
+        nOuro := nOuro +1
+        nTotal := nTotal +1
+        ELSEIF (nC == "B" .or. nC == "b")
+        nBronze := nBronze +1
+        nTotal := nTotal +1
+        ENDIF
+    ENDDO
+ 
+    QOUT("")
+    QOUT("O TOTAL DE MEDALHAS É:", alltrim(str(nTotal)))
+    QOUT("MEDALHAS DE OURO:", alltrim(str(nOuro)))
+    QOUT("MEDALHAS DE PRATA:", alltrim(str(nPrata)))
+    QOUT("MEDALHAS DE BRONZE:", alltrim(str(nBronze)))
+ 
+    ? " "
+ 
+RETURN nil
