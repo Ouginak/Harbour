@@ -1,0 +1,32 @@
+Elaborar um programa que calcule as raízes reais de uma equação de 2º grau, informados os valores
+do coeficiente de x 2(a), do coeficiente de x (b) e do elemento neutro (c).
+
+Function Main()
+ 
+    local nA := 0
+    local nB := 0
+    local nC := 0
+    local nR := 0
+    local nX := 0
+    local nX2 := 0
+    local nX3 := 0
+ 
+    ACCEPT "Digite um valor para A: " TO nA
+    ACCEPT "Digite um valor para B: " TO nB
+    ACCEPT "Digite um valor para C: " TO nC
+ 
+    nR := (val(nB) ^ 2) - (4 * val(nA) * val(nC))
+        if nR > 0
+            nX := ( - val(nB) + ( (nR) ^ 0.5 )) / ( 2 * val(nA))
+            nX2 := ( - Val(nB)) - ( (nR) ^ 0.5 ) / ( 2 * val(nA))
+            QOUT ("A resposta e: " , alltrim(Str(nX)) , alltrim(Str(nX2)))
+            endif
+        if nR < 0
+            QOUT ("Nao existe raiz real")
+        endif
+            if nR = 0
+                 nX3 := ( - val(nB)) / ( 2 * val(nA))
+                QOUT ("O valor foi 0 entao tem uma unica raiz: " , alltrim(Str(nx3)))
+            endif
+ 
+RETURN nil
