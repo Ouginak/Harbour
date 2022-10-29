@@ -1,0 +1,12 @@
+Fazer um programa que dada uma palavra qualquer informada pelo
+usuário apresente na tela o seu primeiro caractere.
+
+Function Main()
+ 
+    local cPalavra
+ 
+    ACCEPT "Digite uma palavra: " to cPalavra
+ 
+   QOUT(Left(cPalavra , 1))
+ 
+RETURN nil
