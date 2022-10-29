@@ -1,0 +1,78 @@
+Altere o algoritmo do programa anterior de forma a não utilizar a função “exp”. 
+OBS: Resolução feia do exercicio mas nessa etapa do curso esse era todo o conhecimento que eu tinha.
+
+Function Main()
+ 
+    Local nExp := 0
+    Local nPot := 0
+    Local nN := 3
+ 
+    For nExp := 0 to 15
+        If nExp = 0
+            nPot = nN*0
+            QOUT(nPot)
+        Endif
+            If nExp = 1
+            nPot = nN
+            QOUT(nPot)
+        Endif
+            If nExp = 2
+            nPot = nN*nN
+            QOUT(nPot)  
+        Endif
+            If nExp = 3
+            nPot = nN*nN*nN
+            QOUT(nPot)
+        Endif
+            If nExp = 4
+            nPot = nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 5
+            nPot = nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 6
+            nPot = nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 7
+            nPot = nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 8
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 9
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 10
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 11
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 12
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 13
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 14
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+        If nExp = 15
+            nPot = nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN*nN
+            QOUT(nPot)
+        Endif
+           
+    Next
+ 
+Return nil
