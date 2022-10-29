@@ -1,0 +1,65 @@
+Jogo do Jokenpô
+
+Function Main()
+ 
+    local nJogador , nNPC , nResultado
+    Local bContinue := .t.
+ 
+    ? "Jogo jokenpo"
+    ? " "
+ 
+    While (bContinue)
+    ACCEPT "Qual a sua jogada ? Pedra (1) , Papel (2), nTesoura (3): " TO nJogador
+    nJogador := val(nJogador)
+            If nJogador <> 1 .and. nJogador <> 2 .and. nJogador <> 3
+             QOUT ("Voce digitou um valor invalido")
+            Elseif nJogador = 1 .or. nJogador = 2 .or. nJogador = 3
+            bContinue := .f.
+            Exit
+        Endif
+    Enddo
+ 
+    nNPC := HB_RandomInt(1 , 3)
+ 
+    QOUT ("Jogador ", nJogador)
+    QOUT ("NPC " , nNPC)
+ 
+    nResultado := qual_vencedor(nJogador , nNPC)
+ 
+    if nResultado <> 0
+ 
+        if nResultado == nJogador .and. nResultado <> 0
+            QOUT ("Voce ganhou !")
+        else
+            QOUT ("Voce perdeu !")
+        endif
+    Else
+        QOUT("O jogo empatou")
+    endif
+ 
+    QOUT(nResultado)
+ 
+ 
+RETURN nil
+ 
+function qual_vencedor(n1 , n2)
+ 
+    local nRet
+ 
+    if n1 == n2
+        nRet := 0
+    endif
+    if n1 == 1 .and. n2 == 2 .or. n1 == 2 .and. n2 == 1
+        nRet := 2
+        QOUT("Papel vence")
+    endif
+    if n1 == 1 .and. n2 == 3 .or. n1 == 3 .and. n2 == 1
+        nRet := 1
+        QOUT("Pedra vence")
+    endif
+    If n1 == 2 .and. n2 == 3 .or. n1 == 3 .and. n2 == 2
+        nRet := 3
+        QOUT("Tesoura vence")
+    endif
+ 
+RETURN nRet
