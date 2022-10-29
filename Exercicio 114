@@ -1,0 +1,20 @@
+Ler 12 elementos de uma matriz tipo vetor, colocá-los em ordem crescente.
+
+function Main()
+    local nI, nA := 0
+    local aArray := {}
+   
+    for nI := 1 to 12
+        nA := hb_randomInt(1,50)
+        AAdd(aArray, nA)
+    next
+ 
+    ?"Vetor gerado aleatoriamente"
+    qout(hb_ValToExp(aArray))
+    ASort(aArray)
+ 
+    ?" "
+    ?"Vetor colocado em ordem crescente"
+    qout(hb_ValToExp(aArray))
+    ?" "
+return nil
