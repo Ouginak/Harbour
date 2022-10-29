@@ -1,0 +1,27 @@
+Criar um algoritmo que efetue o cálculo de uma prestação em atraso.
+para tanto, utilize a fórmula PREST = VALOR + (VALOR * (TAXA/ 100)
+* TEMPO). Apresentar o valor da prestação. O cálculo e a exibição
+deverão ser feitos por um procedimento.
+
+Function Main()
+ 
+    local nPres  := 0
+    local nValor := 0
+    local nTaxa  := 0
+    local nTempo := 0
+ 
+        ACCEPT "Digite o valor da prestacao: "          to nPres
+        ACCEPT "Digite o valor da taxa: "               to nTaxa
+        ACCEPT "Digite o tempo em atraso, em dias: "    to nTempo
+        nPres  := val(nPres)
+        nTaxa  := val(nTaxa)
+        nTempo := val(nTempo)
+ 
+        calculo(@nValor , @nPres , @nTaxa , @nTempo)
+   
+RETURN nil
+ 
+procedure calculo(nValor , nPres , nTaxa, nTempo)
+    nValor := nPres + (nPres * (nTaxa/100) * nTempo)
+    QOUT ("O valor corrigido da prestacao em atraso fica em: " , alltrim(str(nValor)))
+RETURN
