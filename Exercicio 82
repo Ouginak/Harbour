@@ -1,0 +1,33 @@
+Lembra do exercício da troca de valores entre 2 variáveis?
+Implementar um programa que leia 2 valores informados pelo usuário
+e através de um procedimento chamado “troca”, realize a troca dos
+valores entre as duas variáveis.
+
+Function Main()
+ 
+        Local nValorA      := 0
+        Local nValorB      := 0
+        local nResultado   := 0
+        local nResultado2  := 0
+   
+    ACCEPT "Digite o valor de A: " to nValorA
+    ACCEPT "Digite o valor de B: " to nValorB
+    nValorA := val(nValorA)
+    nValorB := val(nValorB)
+   
+    trocatroca(@nValorA , @nValorB)
+ 
+    QOUT("Valor de A: " , alltrim(str(nValorA)))
+    QOUT("Valor de B: " , alltrim(str(nValorB)))
+   
+RETURN nil
+ 
+procedure trocatroca(nValorA , nValorB)
+ 
+    local nAux
+ 
+    nAux := nValorA
+    nValorA := nValorB
+    nValorB := nAux
+ 
+RETURN
