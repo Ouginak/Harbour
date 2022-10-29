@@ -1,0 +1,25 @@
+Fazer um programa para calcular e exibir os "n" primeiros números da série de Fibonacci. O usuário informará o valor de n.
+
+Function Main()
+ 
+    local n1 := -1
+    local n2 := 1  
+    local n3 := 0
+    local nN := 0
+    local nC := 0
+    local a1 := {}
+ 
+    ACCEPT "Digite um numero: " to nN
+    nN := val(nN)
+   
+    while nC < nN
+        n3 := n1 + n2
+        n1 := n2
+        n2 := n3
+        nC++
+        aAdd(a1, n2)
+    enddo
+ 
+    QOUT (hb_valtoexp(a1))
+ 
+RETURN nil
