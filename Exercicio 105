@@ -1,0 +1,36 @@
+Fazer um programa que carregue um vetor de 8 elementos e que inverta a ordem do seu conteúdo.
+Apresente no final o vetor invertido. Usar apenas uma variável composta. 
+
+Function Main()
+ 
+    local aMatriz  := {1,2,3,4,5,6,7,8}
+    local nI := 0
+    local cUsuario := ""
+ 
+    ListaMatriz(aMatriz)
+    ? " "
+    ? "Agora o inverso"
+    ? " "
+    ListaMatriz(aMatriz, .t. )
+   
+RETURN nil
+ 
+static function ListaMatriz(aMatriz , lInverte)
+ 
+    local nI := 1
+ 
+    if lInverte = nil
+        lInverte := .F.
+    endif
+ 
+    if lInverte
+        for nI := len(aMatriz) to 1 step -1
+            QOUT (aMatriz[nI])
+        next
+    else
+        for nI := 1 to len(aMatriz)
+            QOUT (aMatriz[nI])
+        next
+    endif
+ 
+RETURN nil
