@@ -1,0 +1,63 @@
+Dado um número de 1 até 12, apresentar o número de dias do mês correspondente. Se o número escolhido for 2 (fevereiro), considere 28 dias.
+
+Function Main()
+ 
+    local nMes1 := 1
+    local nMes2 := 2
+    local nMes3 := 3
+    local nMes4 := 4
+    local nMes5 := 5
+    local nMes6 := 6
+    local nMes7 := 7
+    local nMes8 := 8
+    local nMes9 := 9
+    local nMes10 := 10
+    local nMes11 := 11
+    local nMes12 := 12
+    local nR := 0
+    
+    ? "Estamos no ano de 2022"
+    ? " "
+ 
+    ACCEPT "Digite o numero do mes para saber quantos dias tem esse mes: " TO nR
+ 
+    nR = val(nR)
+ 
+    if nR = nMes1
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+    if nR = nMes2
+        QOUT ("O mes referente ao numero digitado tem 28 dias.")
+    endif
+    if nR = nMes3
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+    if nR = nMes4
+        QOUT ("O mes referente ao numero digitado tem 30 dias.")
+    endif
+    if nR = nMes5
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+    if nR = nMes6
+        QOUT ("O mes referente ao numero digitado tem 30 dias.")
+    endif
+    if nR = nMes7
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+    if nR = nMes8
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+    if nR = nMes9
+        QOUT ("O mes referente ao numero digitado tem 30 dias.")
+    endif
+    if nR = nMes10
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+    if nR = nMes11
+        QOUT ("O mes referente ao numero digitado tem 30 dias.")
+    endif
+    if nR = nMes12
+        QOUT ("O mes referente ao numero digitado tem 31 dias.")
+    endif
+ 
+RETURN nil
