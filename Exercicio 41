@@ -1,0 +1,33 @@
+Efetuar a leitura de 4 valores inteiros e exibir na tela o menor e o maior deles. 
+
+Function Main()
+   
+    Local nValA , nValB , nValC , nValD
+    
+ACCEPT "Digite valor de A: " to nValA
+ACCEPT "Digite o valor de B: " to nValB
+ACCEPT "Digite o valor de C: " to nValC
+ACCEPT "Digite o valor de D: " to nValD
+ 
+    If val(nValA) < val(nValB) .and. val(nValA) < val(nValC) .and. val(nValA) < val(nValD)
+        QOUT("O menor numero eh: " , nValA)
+    Elseif val(nValB) < val(nValC) .and. val(nValB) < val(nValD)
+        QOUT("O menor numero eh: " , nValB)
+    Elseif val(nValC) < val(nValD)
+        QOUT("O menor numero eh: " , nValC)
+    Else
+        QOUT("O menor numero eh: " , nValD)
+ 
+    Endif
+ 
+    If val(nValA) > val(nValB) .and. val(nValA) > val(nValC) .and. val(nValA) > val(nValD)
+        QOUT("O maior numero eh: " , nValA)
+    Elseif val(nValB) > val(nValC) .and. val(nValB) > val(nValD)
+        QOUT("O maior numero eh: " , nValB)
+    Elseif val(nValC) > val(nValD)
+        QOUT("O maior numero eh: " , nValC)
+    Else
+        QOUT("O maior numero eh: " , nValD)
+    Endif
+ 
+Return nil
