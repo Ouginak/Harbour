@@ -1,0 +1,22 @@
+Fazer um programa para determinar e exibir se um número informado é primo. 
+
+Function Main()
+ 
+    Local nNum := ""
+    Local nCont := 0
+ 
+ACCEPT "Digite o número para verificação ou pressione 'enter' para finalizar: " to nNum
+nNum := val(nNum)
+ 
+    While nNum <> 0
+        If nNum <> 2 .and. nNum%2 == 0 .or. nNum <> 3 .and. nNum%3 == 0 .or. nNum <> 5 .and. nNum%5 == 0 .or. nNum <> 7 .and. nNum%7 == 0
+            QOUT(nNum , "não é primo")
+            Break
+        Endif
+        If nNum%nNum == 0 .and. nNum%1 == 0
+            QOUT(nNum , "é primo")
+            Break
+        Endif
+    Enddo
+ 
+Return nil
