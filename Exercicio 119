@@ -1,0 +1,21 @@
+Criar uma matriz N de 10x3, onde cada elementos será a soma do
+índice de sua coluna com o índice de sua linha. Apresentar a matriz
+resultante.
+
+Function main ( )
+    local aM := {}
+        local nI, nJ
+   
+        aM := array(10)
+        for nI := 1 to 10
+            aM[nI] := array(3)
+            for nJ := 1 to 3
+                aM[nI][nJ] := nI + nJ
+            next nJ
+        next nI
+        for nI := 1 to 10
+            QOUT(hb_valtoexp(aM[nI]))
+        next nI
+   
+        wait
+Return nil
