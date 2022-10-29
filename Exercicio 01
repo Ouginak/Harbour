@@ -1,0 +1,28 @@
+// Ler dois números positivos e apresentar a soma, diferença, produto e quociente entre eles.
+
+Function Main()
+       
+    Local nNu1 := 0
+    Local nNu2 := 0
+    Local nSo := 0
+    Local nSu := 0
+    Local nX  := 0
+    Local nQu := 0
+ 
+    ? "Vamos fazer alguns calculos !"
+    ? ""
+ 
+    ACCEPT "Digite um numero positivo: " TO nNu1
+    ACCEPT "Digite outro numero positivo: " TO nNu2
+ 
+    nSo := Val(nNu1) + Val(nNu2)
+    nSu := Val(nNu1) - Val(nNu2)
+    nX := Val(nNu1) * Val(nNu2)
+    nQu := Val(nNu1) / Val(nNu2)
+ 
+    QOUT("Seus numeros somados: " + Str(nSo))
+    QOUT("Seus numeros subtraidos: " + Str(nSu))
+    QOUT("Seus numeros multiplicados: " + Str(nX))
+    QOUT("Seus numeros divididos: " + Str(nQu))
+ 
+    Return nil
