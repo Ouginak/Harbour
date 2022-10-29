@@ -1,0 +1,24 @@
+Sabendo que a área quadrada é dada pela multiplicação da medida de
+2 lados, escreva um algoritmo que mostre a área quadrada de um
+espaço qualquer cujos lados foram informados pelo usuário. O cálculo
+da área deverá ser realizado por uma função.
+
+Function Main()
+ 
+    local nladoA := 0
+    local nladoB := 0
+    local nArea  := 0
+ 
+    ACCEPT "Digite um lado do quadrado: " to nladoA
+    ACCEPT "Digite um outro lado para o quadrado: " to nladoB
+    nLadoA := val(nLadoA)
+    nLadoB := val(nLadoB)
+ 
+    nArea := calculo(nLadoA , nLadoB)
+ 
+    QOUT ("A area do quadrado e: " , alltrim(str(nArea)))
+ 
+RETURN nil
+ 
+    function calculo(nLadoA , nLadoB)
+    return nLadoA * nLadoB
