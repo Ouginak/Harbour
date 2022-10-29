@@ -1,0 +1,40 @@
+Elaborar um programa que gere, automaticamente, valores aleatórios, entre 0 e 99 e exiba na 
+tela apenas àqueles que são múltiplos de um número informado pelo usuário. A quantidade de 
+valores a serem gerados, também deve ser informado pelo usuário. Fazer duas versões da solução 
+utilizando diferentes estruturas de repetição, a sua escolha. 
+
+Function Main()
+ 
+    Local nN := 0
+    Local nN2 := 0
+    Local aNum := {}
+    Local nCont := 0
+    Local nLim := 0
+ 
+ACCEPT "Digite um número: " to nN
+ACCEPT "Digite o limite: " to nLim
+    nN := val(nN)
+    nLim := val(nLim)
+ 
+    // //ENQUANTO
+    While nLim <> len(aNum)
+        nN2 := hb_RandomInt(0 , 99)
+        nCont++
+       If nN2%nN == 0 .and. nN2 >= nN .or. nN2 = 0
+        aAdd(aNum, nN2)
+       Endif
+    Enddo
+    QOUT(hb_ValtoEXp(aNum))
+ 
+   //PARA
+    For nCont := 1 TO nlim
+        nN2 := hb_RandomInt(0 , 99)
+        If nN2%nN == 0 .and. nN2 >= nN .or. nN2 = 0
+        aAdd(aNum, nN2)
+        Else
+            nCont--
+        Endif        
+    Next
+    QOUT(hb_ValtoEXp(aNum))
+ 
+Return nil
