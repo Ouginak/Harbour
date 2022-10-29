@@ -1,0 +1,18 @@
+Efetuar e apresentar o valor com desconto, dado o valor normal e a porcentagem de desconto.
+
+Function Main()
+ 
+    local nNor := 0
+    local nPorc := 0
+    local nDesc := 0
+   
+    ? "Exercicio 8"
+    ACCEPT "Digite o valor do produto: " TO nNor
+    ACCEPT "Digite a porcentagem de desconto: " TO nPorc
+   
+    nDesc := (Val(nNor) * ((100 - Val(nPorc)) / 100) )  
+   
+    QOUT ("O valor final com desconto é de: ", nDesc )
+    QOUT (" ")
+     
+Return nil
