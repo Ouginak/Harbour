@@ -1,0 +1,19 @@
+Ler uma matriz A do tipo vetor com 5 elementos. Construir uma matriz B de mesmo tipo e dimensão,
+onde cada elemento da matriz B deverá ser o valor inverso (sinal trocado) do elemento 
+correspondente da matriz A. Apresentar os elementos da matriz.
+
+Function Main()
+ 
+    Local nI
+    local aMatrizA := {1,2,3,4,5}
+    local aMatrizB := {}
+    Local nInverso
+ 
+        for nI := 1 to 5
+        nInverso := aMatrizA[nI]*-1
+        aAdd(aMatrizB, nInverso)
+        Next
+ 
+        QOUT(hb_ValtoExp(aMatrizB))
+ 
+Return nil
