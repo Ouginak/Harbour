@@ -1,0 +1,30 @@
+Elaborar um programa que possua uma sub-rotina que efetue o
+somatório dos N primeiros números naturais iniciando em 1. O
+resultado deverá ser exibido no programa principal e não no
+procedimento.
+
+Function Main()
+ 
+    local nN            := 0
+    local nResultado    := 0
+ 
+ 
+        ACCEPT "Digite um numero limite para o calculo dos naturais: " to nN
+        nN := val(nN)
+        nResultado := soma(nN)
+ 
+        QOUT("A soma dos " , nN ," primeiros numeros naturais é: " , alltrim(str(nResultado)))
+ 
+Return nil
+ 
+function soma(nN)
+ 
+    Local valor     := 0
+    Local nContador := 0
+    Local nI
+ 
+    For nI := 1 to nN
+        valor += nContador++
+    Next
+ 
+RETURN valor
