@@ -1,0 +1,68 @@
+Jogo Adivinha o número - parte 2: Continue o desenvolvimento do
+jogo. Agora, o programa deverá continuar dando dicas a cada palpite
+do usuário até que ele acertar o número sorteado. Quando o usuário
+acertar o número gerado deverá ser apresentado o resultado do teste.
+Da seguinte forma:
+• Em menos de 5 tentativas exibir a mensagem: “Você é muito
+bom, acertou em x tentativas.”
+• Em mais do que 5 e menos do que 9 tentativas: “Você é bom,
+acertou em x tentativas".
+• Em mais do que 9 e menos do que 13 tentativas: “Você é
+mediano, acertou em x tentativas”.
+• Em mais do que 13: “Você é muito fraco, acertou em x
+tentativas”
+
+Function Main()
+ 
+    Local nNum := 0
+    Local nSorte := 0
+    Local nCont := 0
+    Local bFiltro := .t.
+ 
+    While (bFiltro)
+    ACCEPT "Escolha um número de 0 a 100: " to nNum
+    nNum := val(nNum)
+        If nNum > 0 .and. nNum < 100
+            bFiltro := .f.
+        Endif
+    Enddo
+    nSorte := hb_RandomInt(0 , 100)
+ 
+    Do while nNum > nSorte
+        QOUT("Voce errou, seu número e MAIOR que o sorteado")
+        ACCEPT "Nova tentativa: " to nNum
+        nNum := val(nNum)
+        nCont++
+    If nNum = nSorte
+        Exit
+    Endif
+    Enddo
+ 
+    Do while nNum < nSorte
+        QOUT("Voce errou seu número e menor que o sorteado")
+        ACCEPT "Nova tentativa: " to nNum
+        nNum := val(nNum)
+        nCont++
+    If nNum = nSorte
+        Exit
+    Endif
+    Enddo
+ 
+    ? "Resultado:"
+    If nCont >= 13
+    QOUT("Você é muito fraco, acertou em " , alltrim(str(nCont+1)) , " tentativas")
+    Endif
+    If nCont >= 9 .and. nCont < 13
+    QOUT("Você é mediano, acertou em " , alltrim(str(nCont+1)) , " tentativas!")
+    Endif
+    If nCont >= 5 .and. nCont < 9
+    QOUT("Você é bom, acertou em " , alltrim(str(nCont+1)) , " tentativas!")
+    Endif
+    If nCont < 5 .and. nCont <> 0
+    QOUT("Você é muito bom, acertou em " , alltrim(str(nCont+1)) , " tentativas!")
+    Endif
+    If nCont = 0
+    QOUT("Boa !!! Você acertou de primeira!")
+    Endif
+ 
+Return nil
