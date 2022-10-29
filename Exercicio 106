@@ -1,0 +1,18 @@
+Ler 8 elementos em uma matriz A tipo vetor. Construir uma matriz B de mesma dimensão onde cada elemento é o triplo do elemento correspondente da mátria A.
+
+Function Main()
+ 
+    Local nI
+    local aVetor1 := {1,2,3,4,5,6,7,8}
+    local aVetor2 := {}
+    Local nCont := 8
+    Local nTriplo
+ 
+        for nI := 1 to 8
+        nTriplo := aVetor1[nI]*3
+        aAdd(aVetor2, nTriplo)
+        Next
+ 
+        QOUT(hb_ValtoExp(aVetor2))
+       
+Return nil
