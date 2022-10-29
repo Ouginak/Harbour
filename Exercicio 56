@@ -1,0 +1,25 @@
+Faça um programa que calcule a somatória dos "n" primeiros números naturais 
+pares ou ímpares. O usuário informará através de digitação: a quantidade de
+números desejada ("n") e escolhe entre par o ímpar.
+
+Function Main()
+ 
+    Local nS := 0
+    local nN := 0
+    Local cPI := 0
+ 
+    ACCEPT "Digite quantos números: " to nN
+    ACCEPT "Escolha par ou ímpar (P/I): " to cPI
+    cPI := UPPER(cPI)
+    nN := val(nN)
+ 
+    Do case
+        Case cPI = "P"
+        nS := nN*nN + nN
+        QOUT (round(nS, 0))
+        Case cPI = "I"
+        nS := nN*nN
+        QOUT (round(nS, 0))
+    Endcase
+ 
+Return nil
