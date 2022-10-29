@@ -1,0 +1,20 @@
+Efetuar a leitura de um valor inteiro positivo ou negativo e apresentar o número lido como sendo um valor negativo.
+Lembre-se de verificar se o número fornecido é maior que zero, sendo multiplique-o por -1. Usar apenas o desvio
+condicional simples. Não poderá utilizar o “senão”
+
+Function Main()
+ 
+    local nNum := 0
+ 
+    ACCEPT "Digite um numero: " TO nNum
+ 
+    if val(nNum) > 0
+    nNum := (val(nNum) * (-1))
+    endif
+        if val(nNum) < 0
+            QOUT("Nada aconteceu: " , alltrim(nNum))
+    endif
+ 
+    QOUT ("O seu numero negativo e: " , alltrim(nNum))
+ 
+    RETURN nil
