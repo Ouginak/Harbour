@@ -1,0 +1,69 @@
+Ler quatro valores referentes a quatro notas escolares de um aluno e imprimir 
+uma mensagem dizendo que o aluno foi aprovado, se o valor da média escolar for
+maior ou igual a 7. Se o valor da média for menor que 7, solicitar a nota de exame,
+sornar com o valor da média e obter nova média. Se a nova média for maior ou igual
+a 5, apresentar uma mensagem dizendo que o aluno foi aprovado em exame. Se o aluno 
+não foi aprovado, indicar uma mensagem informando esta condição. Apresentar com as 
+mensagens o valor da média do aluno, para qualquer condição. Atenção. Deverá ser 
+feita a consistência dos dados de entrada para aceitar apenas notas com valores entre 0 e 10. 
+
+Function Main()
+ 
+    local n1 := 0
+    local n2 := 0
+    local n3 := 0
+    local n4 := 0
+    local nMedia := 0
+    local nExa := 0
+ 
+    ACCEPT "Digite a sua primeira nota: " TO n1
+    n1 := val(n1)
+ 
+        While n1 < 0 .or. n1 > 10
+        ACCEPT "Digite novamente a nota(entre 0 e 10): " to n1
+        n1 = val(n1)
+        loop
+        Enddo  
+ 
+    ACCEPT "Digite a sua segunda nota: " TO n2
+    n2 := val(n2)
+ 
+    While n2 < 0 .or. n2 > 10
+        ACCEPT "Digite novamente a nota(entre 0 e 10): " to n2
+        n2 = val(n2)
+        loop
+        Enddo  
+ 
+    ACCEPT "Digite a sua terceira nota: " TO n3
+    n3 := val(n3)
+ 
+    While n3 < 0 .or. n3 > 10
+        ACCEPT "Digite novamente a nota(entre 0 e 10): " to n3
+        n3 = val(n3)
+        loop
+        Enddo  
+ 
+    ACCEPT "Digite a sua quarta nota: " TO n4
+    n4 := val(n4)
+ 
+    While n4 < 0 .or. n4 > 10
+        ACCEPT "Digite novamente a nota(entre 0 e 10): " to n4
+        n4 = val(n4)
+        loop
+        Enddo  
+ 
+    nMedia := (n1 + n2 + n3 + n4) / 4
+ 
+        if nMedia >= 7
+            QOUT ("Parabens, voce foi aprovado com a media: " , alltrim(Str(nMedia)))
+        Else
+            ACCEPT "Digite a nota de exame: " TO nExa
+            nMedia = (((nMedia) + val(nExa)) / 2 )
+            if nMedia >= 5
+                QOUT ("Parabens, voce foi aprovado com a media: " , alltrim(Str(nMedia)))
+                Else
+                    QOUT ("REPROVADO, voce nao atingiu a media para ser aprovado, sua media final foi: " , alltrim(Str(nMedia)))
+            endif
+        endif
+ 
+RETURN nil
