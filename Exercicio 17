@@ -1,0 +1,16 @@
+Fazer um programa que apresente o módulo de um valore informado pelo usuário. O módulo é o número sempre positivo.
+Exemplo | 5 | = 5 e | -5 | = 5 (módulo de 5 igual a cinco e módulo de -5 igual a cinco também
+
+Function Main()
+ 
+    Local nNum := 0
+   
+    ACCEPT "Digite o número: " to nNum
+ 
+    If val(nNum) < 0
+    QOUT("O módulo é: " , val(nNum) * (-1))
+    Else
+    QOUT("O módulo é: " , (nNum))
+    Endif
+ 
+Return nil
