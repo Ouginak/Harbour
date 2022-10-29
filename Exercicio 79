@@ -1,0 +1,26 @@
+Altera o algoritmo anterior, para que faça o mesmo para 10.000 valores.
+
+Function Main()
+ 
+    Local nN
+    Local aNum := {}
+    Local nCont := 0
+ 
+    ? "Exercicio 52"
+    ? " "
+   
+    Do while nCont < 10000
+    nN := hb_RandomInt(0 , 1000)
+    nCont++
+    aAdd(aNum, nN)
+    Enddo
+ 
+ QOUT(hb_ValtoExp(aNum))
+   
+    While nCont > 0
+        QOUT(aNum[nCont])
+        nCont--
+    Enddo
+ 
+ 
+Return nil
