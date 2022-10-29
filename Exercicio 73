@@ -1,0 +1,27 @@
+Um cliente utiliza uma determinada solução de GED/ECM. Nesta
+solução os usuários criam fichas de produtos e enviam uma série de
+arquivos de imagens deste dado produto. Você foi solicitado a fazer
+uma rotina que vá lendo uma série de dados informando o tamanho
+de cada arquivo em Megabytes. O programa deverá informar ao
+usuário um próximo arquivo estourar o limite estabelecida de 1,5
+Gigabaytes, para cada ficha.
+
+Function Main()
+ 
+    Local nSoma:=0
+    Local nBytes:=0
+ 
+    While nSoma < 1501
+        ACCEPT("Informe o tamanho do arquivo em MB: ") to nBytes
+        nBytes:=Val(nBytes)
+        nSoma:=nSoma+nBytes
+ 
+        If nSoma >1501
+            qout("Você atingiu a capacidade máxima de armazenamento")
+            Exit
+        Else
+            qout("Ainda resta ",Alltrim(STR(1500-nSoma)),"MB de armazenamento")
+        Endif
+    Enddo
+ 
+Return nil
