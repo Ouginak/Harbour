@@ -1,0 +1,19 @@
+Ler uma matriz A do tipo vetor com 10 elementos. Construir uma matriz B de mesmo tipo,
+sendo que cada elemento de B seja o somatório do primeiro até o elemento correspondente
+de A. Apresentar os elementos da matriz B. 
+
+Function Main()
+ 
+    local aMatrizA := {1,2,3,4,5,6,7,8,9,10}
+    local aMatrizB := {}
+    local nI
+    local nSoma    := 0
+ 
+    for nI := 1 to 10
+    nSoma := nSoma + aMatrizA[nI]
+    aAdd (aMatrizB , nSoma)
+    next
+ 
+    QOUT(hb_ValtoExp(aMatrizB))
+ 
+RETURN nil
