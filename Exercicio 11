@@ -1,0 +1,19 @@
+Ler dois inteiros (variáveis A e B) e imprimir o resultado do quadrado da diferença do primeiro valor pelo segundo.
+
+Function Main ()
+ 
+    local nA := 0
+    local nB := 0
+    local nAB := 0
+ 
+    ? "Exercicio 11"
+    ? " "
+ 
+    ACCEPT "Digite um valor para A: " TO nA
+    ACCEPT "Digite um valor para B: " TO nB
+ 
+    nAB := ((Val(nA) - Val(nB)) ^ 2 )
+ 
+    QOUT ("O resultado do quadrado da diferença entre", nA , "e" , nB , "e : " , Alltrim(Str(nAB)) )
+ 
+    RETURN nil
