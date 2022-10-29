@@ -1,0 +1,26 @@
+Elaborar um programa que exiba na tela, automaticamente, 50 valores gerados aleatoriamente, entre 10 e 99.
+Fazer 3 versões desta solução: uma utilizando laço com pré-teste (enquanto), outra usando laço com pós-teste 
+(repita) e uma última usando laço finito (para).
+OBS: No Harbour, Clipper, não existe o "repita"
+
+Function Main()
+ 
+    Local nN
+    Local aNum := {}
+    Local nCont := 0
+ 
+    Do while nCont < 10000
+    nN := hb_RandomInt(0 , 1000)
+    nCont++
+    aAdd(aNum, nN)
+    Enddo
+ 
+ QOUT(hb_ValtoExp(aNum))
+   
+    While nCont > 0
+        QOUT(aNum[nCont])
+        nCont--
+    Enddo
+ 
+ 
+Return nil
