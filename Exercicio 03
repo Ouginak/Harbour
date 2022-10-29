@@ -1,0 +1,20 @@
+Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. A fórmula de conversão é: C (F - 32) * (5/9).
+Onde F é a temperatura em Fahrenheit e C é a temperatura em Celsius.
+
+Function Main()
+ 
+    Local nTemp := 0
+    Local nCel := 0
+ 
+    ? "Ola, vamos converter graus Fahrenheit em Celsius !"
+    ? ""
+ 
+    ACCEPT "Digite a temperatura em graus Fahrenheit: " TO nTemp
+ 
+    nCel = ((Val(nTemp)-32) * (5/9))
+ 
+    QOUT ("")
+    QOUT ("A temperatura em Celsius e: " + Str(nCel))
+    QOUT (" ")
+ 
+    RETURN nil
