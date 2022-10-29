@@ -1,0 +1,25 @@
+Ler dois valores numéricos e apresentar a diferença do maior pelo menor. Usar apenas o desvio condicional simples. Não poderá utilizar o “senão”. 
+
+Function Main()
+ 
+    local n1 := 0
+    local n2 := 0
+    local nR := 0
+ 
+    ? "Exercicio 22"
+    ? " "
+ 
+    ACCEPT "Digite um numero: " TO n1
+    ACCEPT "Digite outro numero: " TO n2
+ 
+    if n1 > n2
+        nr = val(n1) - val(n2)
+            if n1 < n2
+                nr = val(n2) - val(n1)
+            endif
+       
+    endif
+ 
+    QOUT ("A diferenca do maior numero pelo menor e: " , alltrim(Str(nR)))
+ 
+ RETURN nil
